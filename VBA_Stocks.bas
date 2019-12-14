@@ -45,7 +45,7 @@ For Each ws In Worksheets
 
 ' calculate percent change and account for division by 0
         If ws.Cells(FirstUniqueRow, 3).Value <> 0 Then
-            ws.Cells(counter, 11).Value = (ws.Cells(LastUniqueRow, 6).Value - Cells(FirstUniqueRow, 3).Value) / ws.Cells(FirstUniqueRow, 3)
+            ws.Cells(counter, 11).Value = (ws.Cells(LastUniqueRow, 6).Value - ws.Cells(FirstUniqueRow, 3).Value) / ws.Cells(FirstUniqueRow, 3).Value
         Else
             ws.Cells(counter, 11).Value = 0
         End If
